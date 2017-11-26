@@ -2,6 +2,7 @@
 
 {% block content %}
     <div class="country">
+	<a class="btn btn-default" href="{% url 'country_edit' pk=country.pk %}"><span class="glyphicon glyphicon-pencil"></span></a>
         <h1>{{ country.country }}</h1>
         <p>{{ country.currency}} - {{ country.currency_symbol}}</p>
     </div>

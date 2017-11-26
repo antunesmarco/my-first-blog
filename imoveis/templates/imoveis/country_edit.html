@@ -1,0 +1,10 @@
+{% extends 'imoveis/base.html' %}
+
+{% block content %}
+    <h1>Novo País</h1>
+    <form method="POST" class="country-form">{% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="save btn btn-default">Save</button>
+    </form>
+{% endblock %}
+
