@@ -1,18 +1,11 @@
-<html>
-    <head>
-        <title>Django Pense Imóveis Joinville</title>
-    </head>
-    <body>
-        <div>
-            <h1><a href="/">Django Pense Imoveis Joinville</a></h1>
-        </div>
+{% extends 'imoveis/base.html' %}
 
+{% block content %}
 	{% for country in countries %}
-	        <div>
-			<p>País: {{ country.country }} - {{ country.currency }}</p>
+		<div class="country">
+			<h1><a href="{% url 'country_detail' pk=country.pk %}">País: {{ country.country }} - {{ country.currency }}</a></h1>		
 	        </div>
-
 	{% endfor %}	
+{% endblock %}
 
-    </body>
-</html>
+
