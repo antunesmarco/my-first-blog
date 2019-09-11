@@ -2,7 +2,7 @@
 {% load staticfiles %}
 <html>
 	<head>
-	        <title>Django Pense Imóveis Joinville</title>
+	        <title>JC Flux - Envie a imagem da nota</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
@@ -25,7 +25,7 @@
 		{% if user.is_authenticated %}
 			<a href="{% url 'country_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
 		{% endif %}
-        	<h1><a href="/">Django Pense Imóveis Joinville</a></h1>
+        	<h1><a href="/">JC FLux Envie a imagem da nota</a></h1>
 	    </div>
 
 <div class="container">
@@ -44,39 +44,13 @@
  
     <select id="option-droup-demo" multiple="multiple">
  
-        <optgroup label="WebS Development">
+        <optgroup label="Dispositivo:">
  
-            <option value="jQuery">jQuery</option>
+            <option value="Camera">Câmera</option>
  
-            <option value="Bootstrap">Bootstrap</option>
- 
-            <option value="HTML" selected="selected">HTML</option>
- 
-            <option value="CSS" selected="selected">CSS</option>
- 
-            <option value="Angular">Angular</option>
- 
+            <option value="Galeria">Galeria de Imagens</option>
+  
         </optgroup>
- 
-        <optgroup label="Programming Languages">
- 
-            <option value="Java">Java</option>
- 
-            <option value="csharp">C#</option>
- 
-            <option value="Python">Python</option>
- 
-        </optgroup>
- 
-        <optgroup label="Databases">
- 
-            <option value="MySQL">MySQL</option>
- 
-            <option value="Oracle">Oracle</option>
- 
-            <option value="MSSQL">MS SQL Server</option>
- 
-        </optgroup>       
  
     </select>
  
