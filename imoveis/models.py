@@ -17,10 +17,10 @@ class Neighborhood(models.Model):
 	neighborhood = models.CharField(max_length=80)			
 
 class Property(models.Model):
-    real_state_id 		= models.ForeignKey('Real_State')
+    real_state_id 		= models.ForeignKey('Real_State', on_delete=models.PROTECT)
     property_id			= models.CharField(max_length=40)
     property_name		= models.CharField(max_length=80)
-    property_type_id 	= models.ForeignKey('Property_Type')
+    property_type_id 	= models.ForeignKey('Property_Type', on_delete=models.PROTECT)
     beds 				= models.IntegerField()
     baths				= models.IntegerField()
     days				= models.IntegerField()
@@ -28,7 +28,7 @@ class Property(models.Model):
     lot_size			= models.DecimalField(max_digits=8, decimal_places=2)
     home_age			= models.IntegerField()
     garage				= models.IntegerField()
-    neighborhood		= models.ForeignKey('Neighborhood')
+    neighborhood		= models.ForeignKey('Neighborhood', on_delete=models.PROTECT)
     price				= models.DecimalField(max_digits=14, decimal_places=2)
     items				= models.TextField()
     created_date 		= models.DateTimeField(default=timezone.now)
